@@ -62,12 +62,16 @@
 .content {
   background-color: antiquewhite;
 }
-
+.gallery {
+  padding: 75px 0px;
+}
 .gallery__pic {
   object-fit:cover;
   width: 300px;
   height: 300px;
 }
+
+
 
 .gallery__pic:hover {
   object-fit: contain;
@@ -88,6 +92,7 @@
   flex-direction: column;
   align-items: center;
   animation: cat 2s infinite linear normal;
+  overflow: hidden;
 }
 
 .gallery__list__item:hover {
@@ -105,5 +110,11 @@
   }
   100%{
     transform: rotate(360deg);
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 1150px) {
+  .gallery__list {
+    flex-direction: column;
   }
 }
